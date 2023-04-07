@@ -1,0 +1,113 @@
+
+div {
+  width: 100%;
+}
+
+label, span {
+    font-weight: 600;
+    font-size: 1em;
+    color: #333;  
+    margin-bottom: 0.5rem;
+  }
+  
+  label {
+    width: 100%;
+    max-width: 20rem;
+  }
+  
+  span {
+    margin-left: 0.5rem;
+  }
+
+p {
+    font-weight: bold;
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.5;    
+    margin-bottom: 25px !important;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  th {
+    background-color: #ddd;
+    font-weight: bold;
+    padding: 0.5em;
+    text-align: left;
+  }
+  
+  td {
+    border: 1px solid #ddd;
+    padding: 0.5em;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  /* Style the label text */
+label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Style the text input */
+  input[type="text"] {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0.5em;    
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }
+  
+  input, select {    
+    box-sizing: border-box;
+    width: calc(100% - 250px);
+    margin-left: 20px;
+  }
+  
+  input[type="number"] {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0.5em;    
+    font-size: 1.1em;
+    margin-bottom: 1em;
+  }  
+  
+
+  select {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0.5em;  
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    background-color: white;
+    background-image: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }  
+ 
+  select:after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }  
+  
+  select[disabled]:after {
+    color: #bbb;
+  }  
+  
+  select option {
+    font-size: 1em;
+  }
+  
+  
+  
