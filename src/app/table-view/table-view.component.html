@@ -1,0 +1,18 @@
+<table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Rating(Users)</th>
+        <th>Vicinity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.status }}</td>
+        <td>{{ item.rating }}</td>
+        <td>{{ item.vicinity }}</td>
+      </tr>
+    </tbody>
+  </table>

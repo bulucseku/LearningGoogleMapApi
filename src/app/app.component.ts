@@ -1,4 +1,5 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { TableViewComponent } from './table-view/table-view.component';
 declare var google: any;
 
 @Component({
@@ -48,8 +49,7 @@ export class AppComponent implements OnInit {
     autocomplete.addListener('place_changed', () => {
       const place = autocomplete.getPlace();      
       this.searchValue = place.name;
-      this.selectedLocation = {lat: place.geometry.location.lat(), lng: place.geometry.location.lng()};      
-      // console.log(this.selectedLocation);
+      this.selectedLocation = {lat: place.geometry.location.lat(), lng: place.geometry.location.lng()};           
     });
 
     this.initMap();
@@ -99,13 +99,16 @@ export class AppComponent implements OnInit {
     this.service.nearbySearch(request, (results: any, status: any) => {
       if (status === google.maps.places.PlacesServiceStatus.OK) {
         this.clearMarkers();
-        this.addMarkers(results);
-          // Recenter the map to the location of the first result
+        this.addMarkers(results);          
           if (results.length > 0) {
             const firstResult = results[0];
             const firstResultLocation = firstResult.geometry.location;
             this.map.panTo(firstResultLocation);
           }
+      } else {
+        this.items = []; 
+        this.clearMarkers();
+        this.cdr.detectChanges();
       }
     });
   }

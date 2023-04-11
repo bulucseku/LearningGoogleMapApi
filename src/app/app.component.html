@@ -1,11 +1,3 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <style>
   :host {
@@ -340,25 +332,9 @@
   </div>
 
   <span style="width: 100%;"><h4>{{getResourceType() | titlecase}} near {{searchValue}}</h4></span>
-
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Status</th>
-        <th>Rating(Users)</th>
-        <th>Vicinity</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of items">
-        <td>{{ item.name }}</td>
-        <td>{{ item.status }}</td>
-        <td>{{ item.rating }}</td>
-        <td>{{ item.vicinity }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div>
+    <app-table-view [items]="items"></app-table-view>
+  </div>
 
   <div style="margin: 20px 0;"></div>
 

@@ -3,13 +3,15 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { TableViewComponent } from './table-view/table-view.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableViewComponent
   ],
-  imports: 
-    [FormsModule, 
+  imports:[
+    FormsModule, 
     BrowserModule
   ],
   providers: [],
